@@ -1,4 +1,5 @@
 __path = process.cwd()
+const path = require('path');
 require("./settings");
 var express = require('express'),
     cors = require('cors'),
