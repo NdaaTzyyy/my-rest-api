@@ -35,11 +35,11 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-app.set("views", __dirname + "/views");
-app.set("view engine", "ejs");
-app.use(express.static(__dirname + "public"));
-app.use(expressLayout);
-app.use(express.static("assets"))
+//const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'assets')));
+
+
 
 app.enable('trust proxy');
 app.set("json spaces",2)
